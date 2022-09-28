@@ -32,7 +32,56 @@ class HomeView extends StatelessWidget {
               ),
               centerTitle: true,
             ),
-            body: Container(),
+            body: BlocBuilder<HomeCubit, HomeStates>(
+              builder: (context, state) {
+                if (state is HomeInitialState) {
+                  return const Center(
+                    child: CircularProgressIndicator.adaptive(),
+                  );
+                } else if (state is HomeCompletedState) {
+                  state.data;
+                  debugPrint(state.data.toString());
+                  return ListView.builder(
+                    itemCount: state.data.length,
+                    itemBuilder: (context, index) {
+                      return Card(
+                        child: ListTile(
+                          subtitle: Text(
+                            state.data[index]["email"],
+                          ),
+                          title: Text(
+                            state.data[index]["name"],
+                          ),
+                          selected: true,
+                          selectedColor: Colors.green,
+                          onLongPress: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                return const AlertDialog(
+                                  actions: [
+                                    Center(
+                                      child: Text(
+                                        "Nothing Not Here",
+                                        style: TextStyle(fontSize: 20),
+                                      ),
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
+                          },
+                        ),
+                      );
+                    },
+                  );
+                } else {
+                  return const Center(
+                    child: Text("Internet kemayapti"),
+                  );
+                }
+              },
+            ),
           );
         },
       ),
