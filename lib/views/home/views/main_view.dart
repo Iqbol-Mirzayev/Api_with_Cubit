@@ -1,5 +1,6 @@
 import 'package:api_with_cubit/views/home/cubit/main_cubit.dart';
 import 'package:api_with_cubit/views/home/state/main_state.dart';
+import 'package:api_with_cubit/views/home/views/home/view/home_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,9 +23,7 @@ class _MainViewState extends State<MainView> {
               child: Text("Eco page"),
             );
           } else if (state is HomeState) {
-            return const Center(
-              child: Text("Home Page"),
-            );
+            return const HomeView();
           } else if (state is SettingsState) {
             return const Center(
               child: Text("Settings Page"),
