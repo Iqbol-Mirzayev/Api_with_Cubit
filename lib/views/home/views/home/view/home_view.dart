@@ -1,5 +1,5 @@
 import 'package:api_with_cubit/views/home/views/home/cubit/home_cubit.dart';
-import 'package:api_with_cubit/views/home/views/home/state/home_state.dart';
+import 'package:api_with_cubit/views/home/views/home/cubit/home_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

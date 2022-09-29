@@ -1,5 +1,5 @@
 import 'package:api_with_cubit/core/constants/apiBase.dart';
-import 'package:api_with_cubit/views/home/views/home/state/home_state.dart';
+import 'package:api_with_cubit/views/home/views/home/cubit/home_state.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

@@ -1,5 +1,5 @@
 import 'package:api_with_cubit/views/home/cubit/main_cubit.dart';
-import 'package:api_with_cubit/views/home/state/main_state.dart';
+import 'package:api_with_cubit/views/home/cubit/main_state.dart';
 import 'package:api_with_cubit/views/home/views/home/view/home_view.dart';
 import 'package:api_with_cubit/views/home/views/posts/view/post_view.dart';
 import 'package:flutter/cupertino.dart';

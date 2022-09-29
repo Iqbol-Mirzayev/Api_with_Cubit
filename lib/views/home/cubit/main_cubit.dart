@@ -1,4 +1,4 @@
-import 'package:api_with_cubit/views/home/state/main_state.dart';
+import 'package:api_with_cubit/views/home/cubit/main_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MainCubit extends Cubit<MainState> {
