@@ -5,4 +5,7 @@ class ApiBase {
 
   final String users = "https://jsonplaceholder.typicode.com/users";
   
+
+    final String posts = "https://jsonplaceholder.typicode.com/posts";
+
 }
