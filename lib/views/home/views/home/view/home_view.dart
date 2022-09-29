@@ -1,4 +1,3 @@
-import 'package:api_with_cubit/views/home/state/main_state.dart';
 import 'package:api_with_cubit/views/home/views/home/cubit/home_cubit.dart';
 import 'package:api_with_cubit/views/home/views/home/state/home_state.dart';
 import 'package:flutter/material.dart';

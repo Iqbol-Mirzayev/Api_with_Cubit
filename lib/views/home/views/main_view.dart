@@ -1,6 +1,7 @@
 import 'package:api_with_cubit/views/home/cubit/main_cubit.dart';
 import 'package:api_with_cubit/views/home/state/main_state.dart';
 import 'package:api_with_cubit/views/home/views/home/view/home_view.dart';
+import 'package:api_with_cubit/views/home/views/posts/view/post_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,9 +26,7 @@ class _MainViewState extends State<MainView> {
           } else if (state is HomeState) {
             return const HomeView();
           } else if (state is SettingsState) {
-            return const Center(
-              child: Text("Settings Page"),
-            );
+            return const PostView();
           } else {
             return const Center(
               child: Text("Profile Page"),
@@ -49,9 +48,9 @@ class _MainViewState extends State<MainView> {
           },
           destinations: const [
             NavigationDestination(
-              icon: Icon(Icons.eco_outlined),
-              label: "Eco",
-              selectedIcon: Icon(Icons.eco_outlined),
+              icon: Icon(Icons.newspaper),
+              label: "News",
+              selectedIcon: Icon(Icons.newspaper),
             ),
             NavigationDestination(
               icon: Icon(Icons.home),
@@ -59,9 +58,9 @@ class _MainViewState extends State<MainView> {
               selectedIcon: Icon(Icons.home),
             ),
             NavigationDestination(
-              icon: Icon(Icons.settings),
-              label: "Settings",
-              selectedIcon: Icon(Icons.settings),
+              icon: Icon(Icons.post_add),
+              label: "Posts",
+              selectedIcon: Icon(Icons.post_add),
             ),
             NavigationDestination(
               icon: Icon(Icons.person),

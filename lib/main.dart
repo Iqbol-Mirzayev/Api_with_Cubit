@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Flutter Demo",
+      
       theme: ThemeData(
         colorScheme: const ColorScheme.light(
           primary: CupertinoColors.quaternarySystemFill,
